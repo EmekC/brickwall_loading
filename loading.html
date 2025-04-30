@@ -12,7 +12,7 @@
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       color: white;
       text-align: center;
-      background: url('https://i.imgur.com/G1v2zjC.jpg') repeat;
+      background: url('https://raw.githubusercontent.com/EmekC/brickwall_loading/refs/heads/main/brickwall_seamless.jpg') repeat;
       background-size: cover;
       animation: scrollBackground 60s linear infinite;
     }
@@ -47,50 +47,13 @@
       opacity: 0.85;
       margin-bottom: 2em;
     }
-
-    .progress-container {
-      width: 60%;
-      height: 30px;
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    }
-
-    .progress-bar {
-      height: 100%;
-      width: 0%;
-      background: linear-gradient(90deg, #ff6a00, #ffb347);
-      text-align: center;
-      line-height: 30px;
-      color: #fff;
-      font-weight: bold;
-      transition: width 0.3s ease;
-      padding: 0 10px;
-      box-sizing: border-box;
-    }
   </style>
 </head>
 <body>
   <div class="overlay">
     <h1>Brickwall Community</h1>
     <h2>Wiremod, Tactical Combat, No Inventory and more!</h2>
-    <div class="progress-container">
-      <div id="progressBar" class="progress-bar">Loading...</div>
-    </div>
   </div>
 
-  <script>
-    // Called by GMod
-    window.UpdateProgress = function(percentage) {
-      const bar = document.getElementById('progressBar');
-      bar.style.width = percentage + '%';
-    }
-
-    window.SetStatusChanged = function(status) {
-      const bar = document.getElementById('progressBar');
-      bar.textContent = status;
-    }
-  </script>
 </body>
 </html>
