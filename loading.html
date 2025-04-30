@@ -12,11 +12,17 @@
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       color: white;
       text-align: center;
-      background-image: url('https://raw.githubusercontent.com/EmekC/brickwall_loading/refs/heads/main/brickwall_seamless.jpg');
-      background-repeat: no-repeat;
+      background-image: url('http://loading.emek.dev/brickwall_seamless.jpg');
+      background-repeat: repeat;
       background-size: cover;
+      animation: scrollBackground 60s linear infinite;
     }
 
+    @keyframes scrollBackground {
+      0% { background-position: 0 0; }
+      100% { background-position: -1000px 0; }
+    }
+    
     .overlay {
       position: absolute;
       top: 0;
