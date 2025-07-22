@@ -12,6 +12,7 @@
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       color: white;
       text-align: center;
+      background-color: black;
     }
 
     .background {
@@ -22,7 +23,7 @@
       height: 100%;
       background-image: url('http://loading.emek.dev/brickwall_seamless.jpg');
       background-repeat: repeat;
-      background-size: cover;
+      background-size: contain;
       animation: scrollBackground 60s linear infinite;
       z-index: -1;
     }
@@ -58,6 +59,29 @@
       opacity: 0.85;
       margin-bottom: 2em;
     }
+
+    .progress-container {
+      width: 60%;
+      height: 25px;
+      background-color: rgba(255, 255, 255, 0.15);
+      border-radius: 15px;
+      overflow: hidden;
+      margin-top: 20px;
+      box-shadow: 0 0 10px #00ffcc40;
+    }
+
+    .progress-bar {
+      width: 0%;
+      height: 100%;
+      background: linear-gradient(90deg, #00ffcc, #00aaff);
+      animation: loading 5s infinite ease-in-out;
+    }
+
+    @keyframes loading {
+      0% { width: 0%; }
+      50% { width: 100%; }
+      100% { width: 0%; }
+    }
   </style>
 </head>
 <body>
@@ -66,6 +90,10 @@
   <div class="overlay">
     <h1>Brickwall Community</h1>
     <h2>Wiremod, Tactical Combat, No Inventory and more!</h2>
+
+    <div class="progress-container">
+      <div class="progress-bar"></div>
+    </div>
   </div>
 </body>
 </html>
