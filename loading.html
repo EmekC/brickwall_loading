@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Brickwall Community</title>
+	<script>
+		function DownloadingFile(filename) {
+			document.getElementById('loading').innerHTML = "Loading " + filename + "...";
+		}
+	</script>
   <style>
     html, body {
       margin: 0;
@@ -37,7 +42,7 @@
     }
 
     h1 {
-      font-size: 4em;
+      font-size: 5em;
       margin-bottom: 0.0em;
 			margin-top: 0;
       letter-spacing: 2px;
@@ -46,6 +51,7 @@
     h2 {
       font-size: 1.5em;
       font-weight: normal;
+			margin-top: 0;
       opacity: 0.85;
       margin-bottom: 0em;
     }
@@ -53,9 +59,8 @@
 </head>
 <body>
   <div class="overlay">
-		<h2>Thank you for choosing</h2>
     <h1>Brickwall Community</h1>
-    <h2></h2>
+		<h2 id='loading'>Loading Content...</h2>
   </div>
 
 </body>
