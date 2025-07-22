@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <title>Brickwall Community</title>
 	<script>
-		function SetStatusChanged(status) {
+		window.SetStatusChanged = function(status) {
 			document.getElementById('loading').innerHTML = status;
-		}
+		};
 	</script>
   <style>
     html, body {
