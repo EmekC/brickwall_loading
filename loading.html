@@ -12,17 +12,26 @@
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       color: white;
       text-align: center;
+    }
+
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 100%;
       background-image: url('http://loading.emek.dev/brickwall_seamless.jpg');
       background-repeat: repeat;
       background-size: cover;
       animation: scrollBackground 60s linear infinite;
+      z-index: -1;
     }
 
     @keyframes scrollBackground {
-      0% { background-position: 0 0; }
-      100% { background-position: -1000px 0; }
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
     }
-    
+
     .overlay {
       position: absolute;
       top: 0;
@@ -34,6 +43,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      z-index: 1;
     }
 
     h1 {
@@ -51,10 +61,11 @@
   </style>
 </head>
 <body>
+  <div class="background"></div>
+
   <div class="overlay">
     <h1>Brickwall Community</h1>
     <h2>Wiremod, Tactical Combat, No Inventory and more!</h2>
   </div>
-
 </body>
 </html>
