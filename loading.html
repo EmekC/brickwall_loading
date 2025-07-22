@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,61 +7,48 @@
     html, body {
       margin: 0;
       padding: 0;
-      overflow: hidden;
       height: 100%;
       width: 100%;
+      background: url('http://loading.emek.dev/brickwall_seamless.jpg') center center fixed;
+      background-size: cover;
+			background-color: rgba(0,0,0,0.0);
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      color: white;
-      text-align: center;
-      background-color: rgba(0,0,0,0.6);
+      overflow: hidden;
+			color: white;
     }
+		
+		.overlay {
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,0.5);
+		}
 
-    .background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 300%;
-      height: 300%;
-      background-image: url('http://loading.emek.dev/brickwall_seamless.jpg');
-      background-repeat: repeat;
-      background-size: auto;
-      animation: scrollBackground 60s linear infinite;
-      z-index: -1;
-    }
-
-    @keyframes scrollBackground {
-      0% { transform: translate(0, 0); }
-      100% { transform: translate(-33%, 0); }
-    }
-
-    .overlay {
+    .centered {
       position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      padding: 40px;
+      text-align: center;
     }
 
     h1 {
-      font-size: 4em;
-      margin-bottom: 0.3em;
-      letter-spacing: 2px;
+      font-size: 5.5em;
+      margin: 0.2em 0;
     }
 
     h2 {
-      font-size: 1.5em;
+      font-size: 2.2em;
       font-weight: normal;
-      opacity: 0.85;
-      margin-bottom: 2em;
+      margin: 0.2em 0 1em;
     }
 
-    .circular-loader {
+    .loader {
       width: 60px;
       height: 60px;
       border: 6px solid rgba(255, 255, 255, 0.2);
-      border-top: 6px solid #00ffcc;
+      border-top: 6px solid white;
       border-radius: 50%;
-      animation: spin 1s linear infinite;
+      animation: spin 1.2s linear infinite;
       margin: 0 auto;
     }
 
@@ -70,24 +56,17 @@
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
-
-    .loading-text {
-      margin-top: 10px;
-      font-size: 1.1em;
-      color: #ccc;
-      opacity: 0.8;
-    }
   </style>
 </head>
 <body>
-  <div class="background"></div>
 
-  <div class="overlay">
+	<div class='overlay' />
+  <div class="centered">
     <h1>Brickwall Community</h1>
-    <h2>Wiremod, Tactical Combat, No Inventory and more!</h2>
-
-    <div class="circular-loader"></div>
-    <div class="loading-text">Loading assets...</div>
+    <h2>Wiremod, Tactical Combat, no pay-to-win and more!</h2>
+    <div class="loader"></div>
   </div>
+
+
 </body>
 </html>
